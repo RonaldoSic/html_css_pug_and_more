@@ -16,10 +16,10 @@ Descripción de los comandos
 5. Compila todos los cambios y de manera indetada y esto hace que se escuchen los cambios en la carpeta includes los compile los que estan en la carpeta pages y los coloca el html ya compilado en otra carpeta llamada 'dist'
 
 Comandos para compilar pug a html 
-'''sh 
+```sh 
 $ pug archivo.pug 
 $ pug -w archivo.pug
 $ pug -w --pretry archivo.pug
 $ pug directorio
 $ pug -w --pretty pages -o dist -p includes
-'''
+```

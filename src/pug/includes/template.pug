@@ -1,0 +1,24 @@
+block config
+  include config
+//- Importando el mixins
+include mixins
+
+doctype
+html
+  head
+    title= `${pageTitle} - ${siteName}`
+    meta(name="deescription" content=metaDescription)
+      //- block title
+    //Con valor predefinido
+    block styles 
+      link(rel="stylesheet", href="../css/index.css")
+  body(class= `${currentPage.toLowerCase().split(' ').join('-')}`)
+    include ../includes/menu
+    h1 Creando el primer template con pug
+    
+    block content
+
+    
+    footer
+      block footer      
+  script(src="../js/app.js")

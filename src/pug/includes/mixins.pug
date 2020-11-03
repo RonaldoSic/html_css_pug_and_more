@@ -1,0 +1,15 @@
+//- los mixins son porciones de codigo que se pueden
+//- reutilizar al estilo como lo hace react es como si fuese un componente
+//- puede ser como una fucion que recibe parametros
+
+mixin boton(url, texto)
+  a(href=url) texto
+
+//- para usarlo se usa el simbolo '+ y el nombre del mixin'
+
+mixin card(imge, title, description) 
+  article.card
+    .card__image  
+      img(src=imge, alt=title)
+    h2.card__title= title
+    p.card__body= description

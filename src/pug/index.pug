@@ -1,0 +1,124 @@
+doctype
+head
+  title Mi primera pagina en Pug
+  meta(name ="viewport" content="")
+  link(rel="stylesheet", href="./css/index.css")
+  //- Estilos en el mismo archivo
+  //Estilos de Css en el mismo doc de HTML
+  style.
+    body{
+      background: red;
+    }
+body.main#bodyP
+  h1 Curso de PUG
+  - let comando = 'code pug -w --pretty index.pug'
+  h4= `Comando para compilar pug ${comando}` 
+  //- Con : Idicamos que la etiqueta que sigue es Hija de otra etiqueta  
+  //Uso de las listas en PUG a HTML
+  div
+    ul
+      li Item 1
+      li 
+        a(href="#") 
+          | Item 2
+      li Item 3
+        ul: li sub item 3.1 
+  //Uso de Javascript en pug
+  //code unbuffered (o sale a HTML)
+  //code buffered (si sale a html)
+  - let nombre = 'Ronaldo Sic'
+  - let currentPage = 'home'
+  - 
+    let person = {
+      name: 'Ronaldo',
+      age: 23,
+      conuntry: 'GT'
+    }
+  p= nombre+' Estudiante de EDteam'
+  //- usando es6
+  p(class=currentPage)= `Estudiante de EDteam ${nombre}`
+  p= `Hi! ${person.name} your age is ${person.age} and you are from ${person.conuntry}`
+
+  //condicionales en PUG
+  if 4 < 2
+    p Si se cumple tu condicional
+  else
+    p No se cumple tu condicion
+  
+
+  //Ciclos
+  -var days = ['Lunes', 'Martes', 'Miercoles', 'Juevez', 'Viernes', 'Sabado', 'Domingo'];
+
+  each day, i in days
+    p= `${day.toUpperCase()} es el dia ${i+1}`
+
+  - let pages = ['Home', 'Nosotros', 'Quienes somos', 'Contatanos']
+  
+  ul
+    each page in pages
+      li: a(href=`${page.split(' ').join('_')}.html`)=`${page}`
+    else 
+      li No hay nada que recorrer
+
+  //Recorrer Objetos
+  - 
+    const carros = {
+      color: 'Red',
+      marck: 'Mazda',
+      price: 25000
+    }
+
+  ul 
+    each val, key in carros
+      li= `El carro es de ${key.toUpperCase()} ${val}`
+
+
+  //crear un menu multi nivel Array de Objetos
+  //Array de objetos
+  - 
+    var newPages = [
+      {
+        title: 'Home',
+        url: 'index.html',
+        child: []
+      },
+      {
+        title: 'Services',
+        url: 'services.html',
+        child: [
+          {
+            title: 'Web design',
+            url: 'web-design.html'
+          },
+          {
+            title:'SEO',
+            url: 'seo.html'
+          }
+        ]
+      },
+      {
+        title: 'Contact us',
+        url: 'conctact.html',
+        child: []
+      }
+    ]
+
+  //- Se recorre el array de objetos
+  ul 
+    each page in newPages    
+      li 
+        a(href=page.url)= `${page.title}`
+        if page.child.length > 0
+          ul
+            each subPage in page.child
+              li: a(href=subPage.url)= subPage.title
+
+
+
+
+  //Uso de js en el docn de HTML
+  script.
+    alert('Codigo js en el mismo doc')
+
+
+

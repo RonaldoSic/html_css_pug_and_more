@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <title>Mi primera pagina en Pug</title>
+  <meta name="viewport" content="">
+  <link rel="stylesheet" href="./css/index.css">
+  <!--Estilos de Css en el mismo doc de HTML-->
+  <style>
+    body{
+      background: red;
+    }
+  </style>
+</head>
+<body class="main" id="bodyP">
+  <h1>Curso de PUG</h1>
+  <h4>Comando para compilar pug code pug -w --pretty index.pug</h4>
+  <!--Uso de las listas en PUG a HTML-->
+  <div>
+    <ul>
+      <li>Item 1</li>
+      <li> <a href="#">
+           Item 2</a></li>
+      <li>Item 3
+        <ul>
+          <li>sub item 3.1 </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!--Uso de Javascript en pug-->
+  <!--code unbuffered (o sale a HTML)-->
+  <!--code buffered (si sale a html)-->
+  <p>Ronaldo Sic Estudiante de EDteam</p>
+  <p class="home">Estudiante de EDteam Ronaldo Sic</p>
+  <p>Hi! Ronaldo your age is 23 and you are from GT</p>
+  <!--condicionales en PUG-->
+  <p>No se cumple tu condicion</p>
+  <!--Ciclos-->
+  <p>LUNES es el dia 1</p>
+  <p>MARTES es el dia 2</p>
+  <p>MIERCOLES es el dia 3</p>
+  <p>JUEVEZ es el dia 4</p>
+  <p>VIERNES es el dia 5</p>
+  <p>SABADO es el dia 6</p>
+  <p>DOMINGO es el dia 7</p>
+  <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Nosotros.html">Nosotros</a></li>
+    <li><a href="Quienes_somos.html">Quienes somos</a></li>
+    <li><a href="Contatanos.html">Contatanos</a></li>
+  </ul>
+  <!--Recorrer Objetos-->
+  <ul> 
+    <li>El carro es de COLOR Red</li>
+    <li>El carro es de MARCK Mazda</li>
+    <li>El carro es de PRICE 25000</li>
+  </ul>
+  <!--crear un menu multi nivel Array de Objetos-->
+  <!--Array de objetos-->
+  <ul> 
+    <li> <a href="index.html">Home</a>
+    </li>
+    <li> <a href="services.html">Services</a>
+      <ul>
+        <li><a href="web-design.html">Web design</a></li>
+        <li><a href="seo.html">SEO</a></li>
+      </ul>
+    </li>
+    <li> <a href="conctact.html">Contact us</a>
+    </li>
+  </ul>
+  <!--Uso de js en el docn de HTML-->
+  <script>alert('Codigo js en el mismo doc')</script>
+</body>

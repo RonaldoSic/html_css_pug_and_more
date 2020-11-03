@@ -1,0 +1,37 @@
+//- Comando para compilar en carpetas ->   pug -w --pretty pages -o dist -p includes
+//- Esto hace que se escuchen los cambios en la carpeta includes los compile los que estan en la carpeta pages y los coloca el html ya compilado en otra carpeta llamada 'dist'
+//- pug -w --pretty pages -o dist -p includes
+//- Include
+//- De esta forma se trae el css y el js como texto plano
+//- style: include ../css/index.css
+//- include ../includes/menu
+//- script: include ../js/app.js
+extends ../includes/template
+//- block title 
+//-   | Index de la pagina
+//- Para evitar que se sobre escriba los estilos, sino que se pueden anadir 
+//- datos nama mas  se pueden usar estas palabras reservadas
+
+//- Colocamos estas palabras reservadas en vez de block
+//-append: coloca el contenido al final
+//-prepend: coloca el conetido al inicio  
+
+//- Para editar las variables globales 
+append config
+  - 
+    pageTitle = 'Binevenidos a nuestra pagina'
+    currentPage = 'Home Page'
+
+append styles
+  link(rel="stylesheet", href="#")
+
+block content
+  h2 Estamos en el index
+    +boton('https://escodgt.com/', 'Ir a ESCod')
+  +card('https://www.jluislopez.es/wp-content/uploads/2018/06/que-es-responsive-web-design.jpg', 'Imagen Titulo', 'Esta imagen es de prueba para un card')
+
+  +card('https://online.seranking.com/files/public/banners/banners/ee9cf8d52edc319c9191b41135651d57.png', 'Titulo de la imagen del card', 'Descripcion de la imagen del card #2')
+
+
+block footer
+  h6 Footer del index

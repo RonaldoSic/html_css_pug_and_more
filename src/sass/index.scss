@@ -1,0 +1,136 @@
+// Modularidad en sass
+@import "menu";
+
+// Variables de SASS
+$background: #2a2a2a;
+$titleColor: #ffeeff;
+$textColor: #f8e006;
+$widthH1:50px;
+// suma o resta de viaribles
+$width2: $widthH1 - 20px;
+
+body{
+  background-color: $background;
+}
+
+h1{
+  color: $titleColor;
+  font-size: $widthH1;
+  padding: 20px;
+}
+
+p{
+  color: $textColor;
+  font-size: $width2;
+  padding: 20px;
+}
+// Anidacion 
+  // Css de fomra clasica
+
+// ul {
+//   list-style: none;
+//   padding: 0;
+//   margin: 60px 0;
+// }
+// ul li {
+//   display: inline-block;
+// }
+// ul li a {
+//   text-decoration: none;
+//   color: $titleColor;
+//   padding: 20px;
+//   background-color: #313131;
+// }
+
+  // Modo en Sass
+// ul{
+//   list-style: none;
+//   padding: 0;
+//   margin: 60px 0;
+//   li {
+//     display: inline-block;
+//     a {
+//       // Podemos anidar propiedades como lo es el texto o el background todo lo que necesite de un - para complementar ejemplo 'background-color', 'text-decoratio' y entre otros.
+//       // text-decoration: none;
+//       text: {
+//         decoration: none;
+//         // text-transform: uppercase;
+//         transform: uppercase;        
+//       }
+//       font: {
+//         size: 14px;
+//       }
+//       color: $titleColor;
+//       padding: 20px;
+//       background-color: #313131;
+//     }
+//   }
+// }
+
+// Modulos o Partials en Sass
+/*
+Se crea un nuevo archivo con el nombre que queremos pero con el 
+simbolo del "_" seguido del nombre, p. ej: "_header.scss" esto para que 
+el compilador de sass no lo tome como un nuevo arvhivo y no lo compile, sino
+solo compile el que necesitamos en este caso solo el "index.scss"
+Para llamarlo solo se necesita colocar en el archivo que lo necesita
+de esta manera: 
+  import @mheader 
+sin el _ y sin la extension, y se recomienda que sea al inicio de cada archivo
+para no tener problemas con los estilos
+*/ 
+// @import "menu";
+
+
+/*
+Uso de los Mixin estos son funciones, que pueden recibir parametros
+son similares a cualquier funcion de cualquier lenguaje de programacion 
+y su sintaxix es de esta manera
+*/ 
+
+@mixin fontStyle($color, $size){
+  font-size: $size;
+  color: $color;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+  padding: 20px;
+}
+h2 {
+  // Para usar un mixin se usa esta sintaxix 
+  @include fontStyle(#1df715,30px)
+}
+
+.p__mixin {
+  @include fontStyle(#7bb2fa,24px)
+}
+
+// usando operadores
+.container {
+  // width: 600px;
+  // Para hacerlo responsive se le da el 100%
+  width: 100%;
+  height: 500px;
+  margin: 0 auto 100px;
+}
+
+section {
+  float: left;
+  // width: 200px; Version en tamaño fijo
+  width: 200px / 600px * 100%;
+  height: 400px;
+  background-color: #4e4e4e;
+}
+
+aside {
+  float: left;
+  /* Para hacerlo de modo responsive se puede hacer los siguiente:
+    se deja el valor en px luego se divide por el tamaño que tenia antes
+    que bienen siendo los 600px que es del container, 
+    seguid de eso se multiplica por el 100% para otorgar el tamaño 
+    en % y no en px de este modo */
+  // width: 400px; Primera version con tamaño fijo en px
+  width: 400px / 600px * 100%; //Con esto nos calcula el tamaño en %
+  height: 400px;
+  background-color: #424242;
+}
+

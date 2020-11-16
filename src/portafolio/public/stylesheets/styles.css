@@ -1,0 +1,65 @@
+/*Reset html*/
+*, :before, ::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, ul, p {
+  margin: 0;
+}
+
+h2, h3 {
+  font-weight: 500;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*Css base*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 3rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 400;
+  background-color: #fbf9f9;
+  color: #534748;
+  line-height: 1.3;
+}
+
+/*Screen width 768*/
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.section-title, .section-subtitle {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #3e0312;
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=styles.css.map */

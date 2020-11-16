@@ -67,3 +67,24 @@ console.log(globalVar);
 const myConstant = 'Constante';
 // myConstant = 'a';
 console.log(myConstant)
+
+// Datos complejos
+
+
+//Funciones declaradas vs funciones expresadas
+funcionDeclarada ();
+function funcionDeclarada(){
+  console.log(`Esto es una fucncion declarada puede ser invocada 
+  en cualquier parte del codigo, incluso antes de que este declarada`);
+}
+
+// Funcion anonima
+
+const funcionExpresada = function () {
+  console.log(`Esto es una funcion anonima o expresada, es decir 
+  una funcion que se ha asignado como valor a una variable, si lo invicamos antes de que se declre JS nos dira "Cannot access 'funcionExpresada' before initialization" ...('No es posible acceder a una funcion 
+  antes de ser inicializada')`);
+}
+
+funcionExpresada()
+

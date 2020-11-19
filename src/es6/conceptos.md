@@ -44,7 +44,7 @@ Los **Identificadores** deben comenzar con.
   const PI = 3.141592;
 ```
 
-### Usar UpperCamelCse en:
+### Usar UpperCamelCase en:
 * Clases:
 ```js 
   class Humano {

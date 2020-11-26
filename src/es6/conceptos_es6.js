@@ -1963,3 +1963,11 @@ for (const propiedad in persona) {
 
 // Para listar los symbolos del objeto
 console.log(Object.getOwnPropertySymbols(persona))
+
+let str = 'Cadena de texto';
+let str2 = 'Hola';
+// console.log(str2.concat(str))
+// let array = [2, 3, 2, 'a', [3, 3]]
+// console.log(array.toString())
+str.extract(',');
+console.log(str)

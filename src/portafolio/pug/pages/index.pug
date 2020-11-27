@@ -1,0 +1,37 @@
+extends ../includes/template
+//- Editando las variables de configuracion de js
+append config
+  -
+    titlePage = 'Ronaldo';
+    siteName = 'Ronaldo-ESCod';
+
+//- llamando los mixins 
+include ../includes/mixins
+
+block content
+  +scrollTop()
+  include ../includes/header
+  main.l-main
+    block main
+      include ../includes/home
+      include ../includes/about
+      include ../includes/qualification
+      include ../includes/services
+      include ../includes/portafolio
+      include ../includes/contact
+block footer
+  include ../includes/footer
+
+
+
+//- Comando para compilar el pug en html de una carpeta a otra 
+//- para el portafolio
+//- pug -w --pretty pages -o ../public -p includes
+
+//- Comando para compilar el archivo Sass a un css en una carpeta 
+//- para el portafolio 
+//- sass --watch sass:public/stylesheets
+
+//- append script 
+//-   script.
+//-     alert('Hola perro')

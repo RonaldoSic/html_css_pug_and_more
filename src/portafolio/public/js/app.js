@@ -78,3 +78,78 @@ function activePortfolio() {
   }
 };
 linkPortfolio.forEach((l) => l.addEventListener("click", activePortfolio));
+
+// Swiper corousel
+// direction: "vertical",
+const mySwiper = new Swiper(".testimonial__container", {
+  spaceBetween: 16,
+  loop: true,
+  grabCoursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+// GSAP ANIMATION
+gsap.from(
+  '.home__img',
+  {
+    opacity: 0,
+    duration: 2,
+    dalay: .5, 
+    x:60,
+  }
+);
+gsap.from(
+  '.home__data',
+  {
+    opacity: 0,
+    duration: 2,
+    dalay: .8, 
+    y:25
+  }
+);
+gsap.from(`.home__button, .home__greeting, .homee__profession, .home__name`, {
+  opacity: 0,
+  duration: 2,
+  dalay: 1,
+  y: 25,
+  ease: 'expo.out',
+  stagger:.2,
+});
+gsap.from(`.nav__logo, .nav__toggle`,
+{
+  opacity: 0,
+  duration: 2,
+  dalay: 1.5,
+  y: 25,
+  ease: 'expo.out',
+  stagger:.2,
+});
+gsap.from(`.nav__item`,
+{
+  opacity: 0,
+  duration: 2,
+  dalay: 1.8,
+  y: 25,
+  ease: 'expo.out',
+  stagger:.2,
+});
+gsap.from(`.home__social-icon`,
+{
+  opacity: 0,
+  duration: 2,
+  dalay: 2.3,
+  y: 25,
+  ease: 'expo.out',
+  stagger:.2,
+});

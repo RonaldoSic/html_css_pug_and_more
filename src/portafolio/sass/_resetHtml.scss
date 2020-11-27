@@ -1,0 +1,22 @@
+@import "fontAndTipography";
+*, :before, ::after {
+  box-sizing: border-box;
+}
+h1,h2,h3,ul,p{
+  margin: 0;
+}
+h2,h3{
+  font-weight: $fontMedium;
+}
+ul{
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;  
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;  
+}

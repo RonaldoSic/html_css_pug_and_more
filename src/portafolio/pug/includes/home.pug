@@ -1,0 +1,15 @@
+include ../includes/mixins
+section.home#home
+  .home__container.bd-container.bd-grid
+    .home__data
+      span.home__greeting Hola, mi nombre es
+      h1.home_name Ronaldo Sic
+      span.home__profession Desarrollador Web
+      a.button.button-light.home__button(href="../public/pdf/Ronaldo_Sic_CV.pdf" download="") Descargar Cv
+    .home__social    
+      +links_icon('https://www.facebook.com/Vasqz.Sic','bx bxl-facebook-circle')
+      +links_icon("https://www.instagram.com/ronald_vasz/?hl=es-la",'bx bxl-instagram-alt')
+      +links_icon('https://twitter.com/ronald12sic','bx bxl-twitter')
+      +links_icon('https://www.linkedin.com/in/ronaldo-sic-40327518b/','bx bxl-linkedin-square')      
+    .home__img
+      img(src="../public/img/home.jpeg", alt=`${siteName}`)

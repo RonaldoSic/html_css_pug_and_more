@@ -1,0 +1,14 @@
+include ../includes/mixins
+section.about.section.bd-container#about
+  span.section-subtitle Mi Historia
+  h2.section-title Sobre mi
+  .about__container.bd-grid
+    .about__data.bd-grid  
+      p.about__description
+        span Hola, soy 
+        | desarrollador web, conozco del desarrollo backend y frontend con las tecnoloías como lo es Python, Java, Node, Reac y entre otros.
+        | Me gusta maquetar diseños web o móviles, en las herramientas como los es Adobe XD o Figma.                
+      +aboutInfo('02','Años de experiencia')
+      +aboutInfo('5+','Proyectos completados')
+      +aboutInfo('12','Tecnologias manejadas')      
+    img.about__img(src="../public/img/about.png", alt="Escod2")

@@ -1,0 +1,29 @@
+include ../includes/mixins
+section.portfolio.section.bd-container#portfolio
+  span.section-subtitle Mis trabajos recientes
+  h2.section-title Portafolio
+
+  .portfolio__nav
+    span.portfolio__item.active-portfolio(data-filter="all") Todos
+    span.portfolio__item(data-filter=".web") Web
+    span.portfolio__item(data-filter=".ux") Maquetador
+    span.portfolio__item(data-filter=".app") App
+    span.portfolio__item(data-filter=".sql") SQL/No SQL
+  
+  .portfolio__container.bd-grid  
+    +portafolioCard('about.png','Desarrollo Web','Pagina Web','Ver detalles','web')
+    +portafolioCard('about.png','Maquetacion Web','Portafolio','Ver detalles','ux')
+    +portafolioCard('about.png','Maquetacion Movil','Portafolio','Ver detalles','ux')
+    +portafolioCard('about.png','Aplicacion Movil','App Android','Ver detalles','app')
+    +portafolioCard('about.png','CRUD','Oracle','Ver detalles','sql')
+
+section.testimonial.section.bd-container
+  span.section-subtitle Mis Clientes dicen
+  h2.section-title Testimonios
+
+  .testimonial__container.swiper-container
+    .swiper-wrapper
+      +testimoniosClientes('home.jpeg', 'Jonathan Olswen','Cliente','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis sapiente, obcaecati enim dolore ea.')
+      +testimoniosClientes('about.png', 'Mario Rodas','Cliente','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis sapiente, obcaecati enim dolore ea.')
+      +testimoniosClientes('about.png', 'Frank Murtzi','Cliente','Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quis sapiente, obcaecati enim dolore ea.')
+    .swiper-pagination

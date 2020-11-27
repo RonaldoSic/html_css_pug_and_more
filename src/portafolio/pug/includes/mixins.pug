@@ -1,0 +1,61 @@
+//- Esto es para el home donde van los iconos de Redes sociales
+mixin links_icon(href_A,class_Icon)
+  a.home__social-icon(href=href_A)         
+    i(class=class_Icon)
+//- Esto es para todo el documento cuando aparece el btn de subir 
+mixin scrollTop()
+  a.scrolltop#scroll-top(href="#")
+    i.bx.bx-chevron-up.scrolltop__icon
+//- Esto es para about donde se pasan las experiencias y todo eso 
+mixin aboutInfo(numberInfo, archievementInfo)
+  div
+    span.about__number=numberInfo
+    span.about__achievement=archievementInfo
+
+//- mixin link(href, name)
+//-   a(href=href)&attributes(attributes)= name
+//- +link('/foo', 'foo')(class="btn")
+
+//- Esto es para las calificaciones
+mixin  calificationGrup(h3Content, spanContent, spanContent2, iconClass)
+  .qualification__data  
+    h3.calification__area #{h3Content}
+    .qualification__box
+      span.qualification__work
+        i(class=iconClass)
+        |#{spanContent}
+      span.qualification__work
+        i.bx.bx-calendar-alt.qualification__title-icon 
+        |#{spanContent2}
+
+//- Esto es para lo de servicios
+mixin serviciosDatos(iconClass, h3Text, pText, aText)
+  .services__data
+    i(class=iconClass)
+    h3.services__title #{h3Text}
+    p.services__description #{pText}
+    a.button(href="#") #{aText}
+
+//- Esto es para lo del portafolio
+mixin portafolioCard(imgName,spanText,h2Text,textBtn,classOrder ="ss")
+  .portfolio__content(class=`mix ${classOrder}`)
+    a(href="#"): img(src=`../public/img/${imgName}`, alt=`${siteName}`)
+    .portfolio__data
+      span.portfolio__subtitle=spanText
+      a(href="#"): h2.portfolio__title=h2Text
+      a.button.button-link(href="#")=textBtn
+
+//- Esto es para el apartado de testimonios
+mixin testimoniosClientes(imgName, h3Text, spanText, pText)
+  .testimonial__content.swiper-slide.AQUIELCARDCONT
+    img.testimonial__img(src=`../public/img/${imgName}`, alt=`${siteName}`)
+    h3.testimonial__title=h3Text
+    span.testimonial__client=spanText
+    p.testimonial__description=pText
+
+//- Esto est par el apartado de contacto 
+mixin contactameBox(iconClass, h3Text, spanText)
+  .contact__box
+    i(class=`${iconClass} contact__icon`)
+    h3.contact__title #{h3Text}
+    span.contact__description #{spanText}

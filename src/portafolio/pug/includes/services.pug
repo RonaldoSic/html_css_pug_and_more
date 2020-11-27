@@ -1,0 +1,37 @@
+include ../includes/mixins
+section.services.section.bd-container#services
+  span.section-subtitle ¿En qué puedo ayudarte?
+  h2.section-title Servicios
+
+  .services__container.bd-grid  
+    +serviciosDatos(
+      'bx bx-palette services__icon',
+      'Maquetador Web y Móvil',
+      'Conozco lo escencial para poder crear y diseñar lo que consideras importante para tu proyecto o trabajo.',
+      'leer más ...')
+    +serviciosDatos(
+      'bx bx-laptop services__icon',
+      'Desarrollador Web',
+      'Puedo ayudarte en la construcción de tus aplicaciones web, desde la construcción de la parte del backend hasta el frontend.',
+      'leer más ...')      
+    +serviciosDatos(
+      'bx bxs-mobile services__icon',
+      'Desarrollador Móvil',
+      'Puedo ayudarte en la construcción de tus aplicaciones móviles para android.',
+      'leer más ...')
+    +serviciosDatos( 
+      'bx bxs-data services__icon',
+      'Administrador de Base de Datos',
+      'Puedo ayudarte con administrar tus base de dato, sql o no sql.',
+      'leer más ...')
+
+//- Proyectos en mente 
+section.project.section.bd-container
+  .project__container.bd-grid
+    .project__data
+      i.bx.bxs-message.project__icon    
+      div
+        h2.project__title Tienes un proyecto en mente
+        p.project__description Cotactame para llevar acabo lo que necesitas.
+      div
+        a.button.button-white(href="#") Aqui estoy

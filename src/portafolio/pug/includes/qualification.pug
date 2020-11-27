@@ -1,0 +1,23 @@
+include ../includes/mixins
+section.qualification.section.bd-container  
+  span.section-subtitle Experiencia y educación
+  h2.section-title Calificación
+  .qualification__container.bd-grid
+    //- Seccion Experiencia laboral
+    .qualification__content
+      h2.qualification__title
+        i.bx.bx-briefcase.qualification__title-icon 
+        | Experiencia laboral
+      .bd-grid      
+        +calificationGrup('Tecnico en reparación','Electrónica Digital','Ene 2016 - Oct 2019','bx bx-briefcase qualification__title-icon')
+        +calificationGrup('Freelancer','Freelancer','Jun 2020 - Dic 2020','bx bx-briefcase qualification__title-icon')      
+    //- Secciond de educacion 
+    .qualification__content
+      h2.qualification__title
+        i.bx.bx-bookmark.qualification__title-icon 
+        | Educación
+      .bd-grid
+        +calificationGrup('Ingeniería en sistemas','Universidad Mariano Gálvez','Feb 2016 - Nov 2020','bx bx-book-alt qualification__title-icon')      
+        +calificationGrup('Bachiller Industrial y Perito en Electrónica','Tecnológico Don Bosco Quetzaltenango','Ene 2013 - Oct 2015','bx bx-book-alt qualification__title-icon')      
+        +calificationGrup('Básico','Instituto de educación basica Telesecundaria','Feb 2010 - Oct 2012','bx bx-book-alt qualification__title-icon')      
+        +calificationGrup('Primaria','Escuela Oficial Rural Mixta','Feb 2004 - Oct 2009','bx bx-book-alt qualification__title-icon')      

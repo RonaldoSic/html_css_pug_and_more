@@ -1,0 +1,26 @@
+include ../includes/mixins
+section.contact.section.bd-container#contact
+  span.section-subtitle Para tus proyectos
+  h2.section-title Contactame
+
+  .contact__container.bd-grid
+    .contact__content.bd-grid    
+      +contactameBox('bx bxs-home','Residencia', 'Paxtoca Totonicapan GUA')
+      +contactameBox('bx bxs-phone','Telefono', '+502 5757-8399')
+      +contactameBox('bx bxs-envelope','Gmail', 'ronysic13@gmail.com')
+      .contact__box
+        i.bx.bx-chat.contact__icon
+        h3.contact__title Escribeme
+        div
+          a.contact__social(href="#"): i.bx.bxl-whatsapp        
+          a.contact__social(href="#"): i.bx.bxl-messenger
+    .form__container  
+      form.contact__fomr(action="")
+      .contact__inputs
+        input.contact__input(type="text", placeholder='Nombre')
+        input.contact__input(type="email", placeholder='Correo')
+      .contact__inputs
+        input.contact__input(type="text", placeholder='Proyecto')
+        input.contact__input(type="number", placeholder='Numero')
+      textarea.contact__input(name="", cols="30", rows="7", placeholder="Mensaje")
+      input.button.contact__button(type="submit", value="Enviar mensaje")

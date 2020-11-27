@@ -1,0 +1,13 @@
+header.l-header#header
+  nav.nav.bd-container
+    a.nav__logo Ronaldo Sic
+    .nav__menu#nav-menu
+      ul.nav__list
+        each item, i in arrayMenu
+          if i >= 1
+            li.nav__item: a.nav__link(href=`#${item.split(' ').join('-')}`)=`${arrayMenuIndicate[i]}`
+          else 
+            li.nav__item: a.nav__link.active-link(href=`#${item.split(' ').join('-')}`)=`${arrayMenuIndicate[i]}`
+    .nav__toggle#nav-toggle
+      i.bx.bx-menu
+

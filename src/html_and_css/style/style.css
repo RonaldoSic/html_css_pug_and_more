@@ -1,0 +1,77 @@
+/*Reset html*/
+*,
+:before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #242424;
+  color: #fff;
+}
+main {
+  margin: 0.6875rem;
+}
+.section {
+  max-width: 358px;
+  width: 100%;
+}
+.bd-container {
+  max-width: 1024px;
+  width: 100%;
+}
+.bd-grid {
+  display: grid;
+}
+/*  */
+.card__container {
+  position: relative;
+  grid-template-columns: repeat(2, max-content);
+  gap: 0.625rem 0.5rem;
+}
+.card {
+  height: 174px;
+  width: 164px;
+  background-color: #373636;
+  border-radius: 0.5em;
+  box-shadow: 4px 4px 4px #00000080;
+}
+
+/* Second cards */
+.cards__lineal__wrapper {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.card__lineal {
+  width: 338px;
+  height: 46px;
+  margin-bottom: 5px;
+  background-color: #373636;
+  border-radius: 0.5em;
+  box-shadow: 0px 3px 6px #00000080;
+}
+
+/* cards 3 */
+/* .sub__cards__lineal{
+  border: 1px solid red;  
+} */
+.card__container_lineal {
+  background-color: #373636;
+  width: 100%;
+  height: 158px;
+  border-radius: 0.5rem;
+  padding: 1.1875rem;
+}
+.sub__card__lineal {
+  background-color: #242424;
+  width: 300px;
+  height: 54px;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 6px #00000080;
+}

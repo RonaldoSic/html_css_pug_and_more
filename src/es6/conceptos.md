@@ -15,7 +15,7 @@ Con JavaScript puedes
 * Aprendizaje Automático
 * Etc.
 
-## Caracterizticas
+## Características
 * Lenguaje de alto nivel.
 * Interpretado.
 * Dinámico.
@@ -24,7 +24,7 @@ Con JavaScript puedes
 * Sensible a MÁYUSCULAS y minúsculas.
 * No necesita los puntos y coma al final de cada línea.
   
-## Estructura de codigo
+## Estructura de código
 Los **Identificadores** deben comenzar con.
 * Una letra o 
 * Un signo de dolar **$** o 
